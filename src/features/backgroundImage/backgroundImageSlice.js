@@ -12,7 +12,12 @@ export const backgroundImageSlice = createSlice({
     imageUrls: [],
     currentImageUrlIndex: 0
   },
-  reducers: {},
+  reducers: {
+    switchToNextBackgroundImage: state => {
+      state.currentImageUrlIndex =
+        (state.currentImageUrlIndex + 1) % state.imageUrls.length
+    }
+  },
   extraReducers: builder => {
     builder.addCase(getBackgroundImage.fulfilled, (state, action) => {
       state.imageUrls = action.payload

@@ -3,7 +3,7 @@ import BackgroundImage from "./features/backgroundImage/BackgroundImage"
 function App () {
   return (
     <div>
-      Inspirational Homepage
+      <h1>Inspirational Homepage</h1>
       <BackgroundImage />
     </div>
   )
