@@ -1,4 +1,4 @@
-import BackgroundImage from "./features/backgroundImage/BackgroundImage"
+import BackgroundImage from './features/backgroundImage/BackgroundImage'
 
 function App () {
   return (

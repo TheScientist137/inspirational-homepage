@@ -1,10 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
+import BackgroundImageLeftControl from './components/BackgroundImageLeftControl'
+import BackgroundImageRightControl from './components/BackgroundImageRightControl'
 import { getBackgroundImage } from './backgroundImageSlice'
-import { switchToNextBackgroundImage } from './backgroundImageSlice'
-import { switchToPreviousBackgroundImage } from './backgroundImageSlice'
-
 import '../../App.css'
 
 function BackgroundImage () {
@@ -12,10 +10,6 @@ function BackgroundImage () {
     state => state.backgroundImage
   )
   const dispatch = useDispatch()
-
-  const handleRightClick = () => dispatch(switchToNextBackgroundImage())
-
-  const handleLeftClick = () => dispatch(switchToPreviousBackgroundImage())
 
   useEffect(() => {
     dispatch(getBackgroundImage())
@@ -29,20 +23,8 @@ function BackgroundImage () {
         id='background-image'
         className='background-image'
       />
-      <button
-        className='left-button'
-        aria-label='Switch to previous wallpaper'
-        onClick={handleLeftClick}
-      >
-        {'<'}
-      </button>
-      <button
-        className='right-button'
-        aria-label='Switch to next wallpaper'
-        onClick={handleRightClick}
-      >
-        {'>'}
-      </button>
+      <BackgroundImageLeftControl />
+      <BackgroundImageRightControl />
     </div>
   )
 }
