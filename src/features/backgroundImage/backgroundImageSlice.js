@@ -16,6 +16,11 @@ export const backgroundImageSlice = createSlice({
     switchToNextBackgroundImage: state => {
       state.currentImageUrlIndex =
         (state.currentImageUrlIndex + 1) % state.imageUrls.length
+    },
+    switchToPreviousBackgroundImage: state => {
+      state.currentImageUrlIndex =
+        (state.currentImageUrlIndex - 1 + state.imageUrls.length) %
+        state.imageUrls.length
     }
   },
   extraReducers: builder => {
