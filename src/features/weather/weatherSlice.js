@@ -10,7 +10,7 @@ export const weatherSlice = createSlice({
   name: 'weather',
   initialState: {
     weather: {},
-    temp: '',
+    temp: 'Temperature',
     city: ''
   },
   reducers: {
