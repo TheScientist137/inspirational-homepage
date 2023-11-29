@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import unsplashApi from '../../api/unsplash'
+import unsplashApi from '../../api/unsplash/index'
 
 export const getBackgroundImage = createAsyncThunk(
   'backgroundImage/getImage',
