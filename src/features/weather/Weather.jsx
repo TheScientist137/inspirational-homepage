@@ -21,7 +21,7 @@ function Weather () {
   return (
     <div className='weather'>
       <p className='weather-city'>{city}</p>
-      <p className='weather-temperature'>{temp}º</p>
+      <p className='weather-temperature'>{temp} º</p>
       <p className='weather-description'>{weather.description}</p>
       <img
         src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}

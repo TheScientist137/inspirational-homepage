@@ -7,7 +7,7 @@ export const quoteSlice = createSlice({
   name: 'quote',
   initialState: {
     content: '',
-    author: 'name'
+    author: ''
   },
   reducers: {},
   extraReducers: builder => {
