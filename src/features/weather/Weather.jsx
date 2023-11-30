@@ -1,15 +1,20 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getWeather, setCity } from './weatherSlice'
 
 function Weather () {
+  const [newCity, setNewCity] = useState('')
   const { weather, temp, city } = useSelector(state => state.weather)
   const dispatch = useDispatch()
 
-  // Add searching with a button when the city is on the input 
-
   const handleCityName = e => {
-    dispatch(setCity(e.target.value))
+    setNewCity(e.target.value)
+  }
+
+  const onFormSubmit = (e) => {
+    e.preventDefault()
+
+    dispatch(setCity(newCity))
   }
 
   useEffect(() => {
@@ -21,20 +26,23 @@ function Weather () {
   return (
     <div className='weather'>
       <p className='weather-city'>{city}</p>
-      <p className='weather-temperature'>{temp} º</p>
+      <p className='weather-temperature'>{temp}</p>
       <p className='weather-description'>{weather.description}</p>
       <img
         src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
         alt=''
         className='weather-icon'
       />
-      <input
-        type='text'
-        value={city}
-        placeholder='Put your city'
-        className='weather-input'
-        onChange={handleCityName}
-      />
+      <form onSubmit={onFormSubmit}>
+        <input
+          type='text'
+          value={newCity}
+          placeholder='Put your city'
+          className='weather-input'
+          onChange={handleCityName}
+        />
+        <button>Search</button>
+      </form>
     </div>
   )
 }

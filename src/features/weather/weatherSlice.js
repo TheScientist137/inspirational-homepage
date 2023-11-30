@@ -10,7 +10,7 @@ export const weatherSlice = createSlice({
   name: 'weather',
   initialState: {
     weather: {},
-    temp: 'Temperature',
+    temp: '',
     city: ''
   },
   reducers: {
@@ -24,7 +24,7 @@ export const weatherSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(getWeather.fulfilled, (state, action) => {
       state.weather = action.payload.weather[0]
-      state.temp = action.payload.main.temp
+      state.temp =  action.payload.main.temp + ' º'
     })
   }
 })
