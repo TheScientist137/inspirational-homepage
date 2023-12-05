@@ -1,0 +1,110 @@
+.journal {
+ margin-top: 4rem;
+ width: 70vw;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.journal-form-container {
+ width: 100%;
+ margin-bottom: 2rem;
+ text-align: center;
+ background-color: rgba(255, 255, 255, 0.2);
+ border-radius: 10px;
+}
+
+.journal-title {
+ padding: 8px;
+ margin-bottom: 0.7rem;
+ font-size: 25px;
+ font-weight: 800;
+ color: aliceblue;
+}
+
+.journal-input {
+ width: 90%;
+ margin-bottom: 10px;
+ padding: 5px;
+ border: none;
+ border-bottom: 2px solid aliceblue;
+ outline: none;
+ text-align: center;
+ background-color: rgba(255, 255, 255, 0);
+ font-size: 20px;
+ color: aliceblue
+}
+
+.journal-list-container {
+ width: 100%;
+ padding: 2rem;
+ text-align: center;
+ background-color: aliceblue;
+ border-radius: 10px;
+ background-color: rgba(255, 255, 255, 0.2);
+}
+
+.journal-unordered-list {
+ padding: 10px;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 10px;
+}
+
+.entry-container {
+ padding: 7px;
+ border: 1px solid aliceblue;
+ border-radius: 10px;
+}
+
+.entry-text {
+ color: aliceblue;
+ opacity: 1;
+ font-size: 18px;
+}
+
+.entry-text-done {
+ opacity: 0.5;
+}
+
+.entry-buttons-container {
+ width: 100%;
+ opacity: 0;
+ display: flex;
+ justify-content: space-around;
+}
+
+.entry-button {
+ border: none;
+ border-radius: 10px;
+ padding:8px 15px;
+ cursor: pointer;
+ color: aliceblue;
+ font-weight: 600;
+}
+
+.entry-button-remove {
+ background-color: red;
+ font-size: 14px;
+}
+
+.entry-button-remove:hover {
+ background-color: rgb(255, 94, 94);
+}
+
+.entry-button-done {
+ background-color: blue;
+ font-size: 14px;
+}
+
+.entry-button-done:hover {
+ background-color: rgb(94, 94, 255);
+}
+
+.entry-container:hover .entry-buttons-container {
+ opacity: 1;
+}
+
+.entry-container:hover .entry-text {
+ opacity: 0.5;
+}

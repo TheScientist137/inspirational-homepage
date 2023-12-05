@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getQuote } from './quoteSlice'
 
+import './Quote.css'
+
 function Quote () {
   const { content, author } = useSelector(state => state.quote)
   const dispatch = useDispatch()
@@ -18,10 +20,14 @@ function Quote () {
 
   console.log(content, author)
   return (
-    <div>
-      <p>{content}</p>
-      <p>{author}</p>
-      <button onClick={handleNewQuote}>Get New Quote</button>
+    <div className='quote-container'>
+      <blockquote className='quote'>
+        <p className='quote-content'>{content}</p>
+        <cite className='quote-author'>{author}</cite>
+      </blockquote>
+      <button className='quote-button' onClick={handleNewQuote}>
+        Get New Quote
+      </button>
     </div>
   )
 }

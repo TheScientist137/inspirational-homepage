@@ -1,0 +1,41 @@
+.quote-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote {
+ width: 70vw;
+ text-align: center;
+}
+
+.quote-content {
+ margin-bottom: 1rem;
+ color: white;
+ font-size: 1.2rem;
+ font-style: italic;
+ font-weight: 700;
+}
+
+.quote-author {
+ color: white;
+ font-size: 1.2rem;
+}
+
+.quote-button {
+ margin-top: 1rem;
+ padding: 12px;
+ background-color: rgba(255, 255, 255, 0.2);
+ border: none;
+ border-radius: 10px;
+ cursor: pointer;
+ font-size: 0.9rem;
+ outline: none;
+ color: aliceblue;
+}
+
+.quote-button:hover {
+  color: aliceblue;
+  transform: scale(1.2);
+}

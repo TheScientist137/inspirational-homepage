@@ -11,7 +11,7 @@ function BackgroundImageLeftControl () {
   return (
     <div>
       <button
-        className='left-button'
+        className='button'
         aria-label='Switch to previous wallpaper'
         onClick={handleLeftClick}
       >
