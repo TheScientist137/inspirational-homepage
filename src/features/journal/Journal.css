@@ -108,3 +108,15 @@
 .entry-container:hover .entry-text {
  opacity: 0.5;
 }
+
+@media (max-width: 800px) {
+ .journal-unordered-list {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+@media (max-width: 570px) {
+ .journal-unordered-list {
+  grid-template-columns: repeat(1, 1fr);
+ }
+}
