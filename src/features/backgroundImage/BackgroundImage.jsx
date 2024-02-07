@@ -25,6 +25,7 @@ function BackgroundImage () {
       />
       <div className='buttons'>
         <BackgroundImageLeftControl />
+        <p className='buttons-text'>Change background</p>        
         <BackgroundImageRightControl />
       </div>
     </div>

@@ -3,19 +3,18 @@ import Weather from './features/weather/Weather'
 import Quote from './features/quote/Quote'
 import Journal from './features/journal/Journal'
 
+import { FaHeart } from "react-icons/fa";
+
 import './App.css'
 
 function App () {
   return (
-    <div className='App'>
-      <div className='content'>
-        <Weather />
-        <Journal />
-        <div className='background'>
-          <BackgroundImage />
-        </div>
-        <Quote />
-      </div>
+    <div className='content'>
+      <Weather />
+      <Journal />
+      <Quote />
+      <BackgroundImage />
+      <footer className='footer'>Made with {<FaHeart className='heart-icon'/>} by Guillermo Casado</footer>
     </div>
   )
 }

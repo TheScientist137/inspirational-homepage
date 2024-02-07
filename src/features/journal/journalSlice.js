@@ -6,7 +6,6 @@ const initialState = {
     { text: 'Make the bed', isDone: false },
     { text: 'Make web pages', isDone: false }
   ],
-  doneEntries: []
 }
 
 export const journalSlice = createSlice({

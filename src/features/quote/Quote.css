@@ -1,12 +1,12 @@
 .quote-container {
-  margin-top: 4rem;
+  width: 570px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .quote {
- width: 70vw;
  text-align: center;
 }
 
@@ -37,5 +37,17 @@
 
 .quote-button:hover {
   color: aliceblue;
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+  .quote-container {
+    width: 80%;
+  }
+  .quote-content {
+    font-size: 0.9rem;
+  }
+  .quote-author {
+    font-size: 0.9rem;
+  }
 }

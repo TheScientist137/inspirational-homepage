@@ -14,6 +14,9 @@ function JournalEntry ({ id, entry, isDone }) {
 
   const handleToggleEntry = () => {
     dispatch(toggleEntryDone(id))
+    setTimeout(() => {
+      dispatch(removeJournalEntry(id))
+    }, 600)
     console.log(isDone)
   }
 

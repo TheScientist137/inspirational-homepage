@@ -1,6 +1,7 @@
 .journal {
- margin-top: 4rem;
- width: 70vw;
+ width: 570px;
+ height: auto;
+ padding: 20px 0;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -8,7 +9,7 @@
 
 .journal-form-container {
  width: 100%;
- margin-bottom: 2rem;
+ margin-bottom: 1rem;
  text-align: center;
  background-color: rgba(255, 255, 255, 0.2);
  border-radius: 10px;
@@ -16,8 +17,7 @@
 
 .journal-title {
  padding: 8px;
- margin-bottom: 0.7rem;
- font-size: 25px;
+ font-size: 20px;
  font-weight: 800;
  color: aliceblue;
 }
@@ -31,13 +31,13 @@
  outline: none;
  text-align: center;
  background-color: rgba(255, 255, 255, 0);
- font-size: 20px;
+ font-size: 16px;
  color: aliceblue
 }
 
 .journal-list-container {
  width: 100%;
- padding: 2rem;
+ padding: 16px;
  text-align: center;
  background-color: aliceblue;
  border-radius: 10px;
@@ -45,9 +45,8 @@
 }
 
 .journal-unordered-list {
- padding: 10px;
  display: grid;
- grid-template-columns: repeat(3, 1fr);
+ grid-template-columns: repeat(1, 1fr);
  gap: 10px;
 }
 
@@ -109,14 +108,12 @@
  opacity: 0.5;
 }
 
-@media (max-width: 800px) {
- .journal-unordered-list {
-  grid-template-columns: repeat(2, 1fr);
+@media (max-width: 700px) {
+ .journal {
+  width: 80%;
+ }
+ .journal-title {
+  font-size: 16px;
  }
 }
 
-@media (max-width: 570px) {
- .journal-unordered-list {
-  grid-template-columns: repeat(1, 1fr);
- }
-}
