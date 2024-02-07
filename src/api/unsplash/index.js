@@ -1,7 +1,7 @@
 // const applicationId = '531974'
 const API_KEY = 'nkoFvIYpT_RSp7_4w-NFL25lP88F0kNU7DQlM_-rkGw'
 // const secretKey = 'N2Oxo5zdKakPgPuqyZzyD9s3r5ovTJdj9JOd1hj_1mk'
-const API_URL = `https://api.unsplash.com/search/photos?query=cosmos&client_id=${API_KEY}`
+const API_URL = `https://api.unsplash.com/search/photos?query=dark&client_id=${API_KEY}`
  
 export const getImage = async () => {
   const response = await fetch(API_URL)

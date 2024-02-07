@@ -46,7 +46,7 @@ function Weather () {
         <input
           type='text'
           value={newCity}
-          placeholder='Search by city or country'
+          placeholder='Search by city'
           className='weather-input'
           onChange={handleCityName}
         />

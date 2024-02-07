@@ -14,7 +14,14 @@ function App () {
       <Journal />
       <Quote />
       <BackgroundImage />
-      <footer className='footer'>Made with {<FaHeart className='heart-icon'/>} by Guillermo Casado</footer>
+      <footer className='footer'>
+        Made with
+          {<FaHeart className='heart-icon'/>}
+        by
+        <a className='github-link' href='https://github.com/TheScientist137?tab=repositories'>
+          Guillermo Casado
+        </a>
+      </footer>
     </div>
   )
 }
